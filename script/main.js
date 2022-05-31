@@ -20,8 +20,10 @@ accordionArray.forEach(element => {
 let inputLineCount = 0;
 let inputAtCount = 0;
 const addressListSubmit = document.querySelector('#address-list-submit');
+const inputSummary = document.querySelector('#input-summary');
 const inputLineCountElm = document.querySelector('#input-line-count');
 const inputAtCountElm = document.querySelector('#input-at-count');
+const validationDetails = document.querySelector('#validation-details');
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value;
@@ -29,6 +31,8 @@ const inputAddressListValidation = () => {
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
     inputAtCount = (inputAddressList.match(/@/g) || []).length;
     inputAtCountElm.innerText = `@ Count : ${inputAtCount}`;
+    inputSummary.style.display = 'block';
+    validationDetails.style.display = 'block';
 
 }
 

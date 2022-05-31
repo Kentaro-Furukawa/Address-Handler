@@ -54,13 +54,13 @@
         @apply mx-auto my-4 px-10 block;
     }
     #input-summary {
-        @apply py-4 text-center bg-slate-200;
+        @apply hidden py-4 text-center bg-slate-200;
     }
     #input-summary>p {
         @apply mt-2;
     }
     #validation-details {
-        @apply w-4/5 mx-auto py-4;
+        @apply hidden w-4/5 mt-4 mb-8 mx-auto py-4;
     }
     #invalid-list, #duplicate-list {
         @apply mt-2 p-4 text-white rounded-md;
@@ -78,7 +78,7 @@
         @apply bg-yellow-500;
     }
     #result {
-        @apply w-4/5 mx-auto py-4;
+        @apply hidden w-4/5 mx-auto py-4;
     }
     #result h2 {
         @apply text-center;

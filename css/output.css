@@ -607,6 +607,7 @@ h3 {
 }
 
 #input-summary {
+  display: none;
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
   padding-top: 1rem;
@@ -621,6 +622,9 @@ h3 {
 #validation-details {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: none;
   width: 80%;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -655,6 +659,7 @@ h3 {
 #result {
   margin-left: auto;
   margin-right: auto;
+  display: none;
   width: 80%;
   padding-top: 1rem;
   padding-bottom: 1rem;
