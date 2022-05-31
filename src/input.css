@@ -4,7 +4,13 @@
 
 @layer components {
     body {
-        @apply bg-slate-200;
+        @apply pb-4 bg-slate-100;
+    }
+    h2 {
+        @apply text-3xl;
+    }
+    h3 {
+        @apply text-2xl;
     }
 
     .button {
@@ -44,14 +50,42 @@
     #src-input .accordion-content input {
         @apply w-full p-2 border-2 rounded-md;
     }
-
     #src-input>button#src-submit {
         @apply mx-auto my-4 px-10 block;
     }
-    #src-details {
-        @apply w-3/6 mx-auto p-4 bg-slate-200;
+    #src-summary {
+        @apply py-4 text-center bg-slate-200;
     }
-
+    #src-summary>p {
+        @apply mt-2;
+    }
+    #validation-details {
+        @apply w-4/5 mx-auto py-4;
+    }
+    #invalid-list, #duplicate-list {
+        @apply mt-2 p-4 text-white rounded-md;
+    }
+    #invalid {
+        @apply mb-4;
+    }
+    #invalid-list {
+        @apply bg-red-500;
+    }
+    #duplicate {
+        @apply mb-4;
+    }
+    #duplicate-list {
+        @apply bg-yellow-500;
+    }
+    #result-summary {
+        @apply w-4/5 mx-auto py-4;
+    }
+    #result-summary h2 {
+        @apply text-center;
+    }
+    #result-summary p {
+        @apply text-center;
+    }
 
 
 }

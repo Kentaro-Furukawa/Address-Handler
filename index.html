@@ -27,28 +27,36 @@
         </div>
         <button id="src-submit" class="button" type="submit">Validate</button>
     </section>
-    <section id="src-details">
+    <section id="src-summary">
+        <h2>Input Summary</h2>
         <p id="src-lines">Input lines:</p>
         <p id="src-at-count">Input @ count:</p>
     </section>
     <section id="validation-details">
         <div id="invalid">
-            <p>Invalid lines:</p>
+            <h3>Invalid lines</h3>
             <ul id="invalid-list">
                 <li>Line 123: invalid.ad`dress@nonono.com</li>
                 <li>Line 123: invalid.ad`dress@nono#no.com</li>
                 <li>Line 123: invalid.a d`dress@nonono.com</li>
             </ul>
         </div>
-        <div id="duplicates">
-            <p>Duplicate:</p>
-            <ul id="duplicates-list">
+        <div id="duplicate">
+            <h3>Duplicate</h3>
+            <ul id="duplicate-list">
                 <li>Line 234: duplicates.example01@example.com</li>
                 <li>Line 334: duplicates.example01@example.com</li>
         </div>
     </section>
     <section id="result-summary">
+        <h2>Result summary</h2>
         <p id="result-at-count">Result @ count:</p>
+        <ol>
+            <li>example@example.com</li>
+            <li>example@example.com</li>
+            <li>example@example.com</li>
+            <li>example@example.com</li>
+        </ol>
     </section>
 
 
