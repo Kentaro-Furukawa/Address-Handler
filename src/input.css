@@ -29,11 +29,6 @@
     #src-details {
         @apply w-3/6 mx-auto p-4 bg-slate-200;
     }
-    #modifier {
-        @apply p-4 bg-slate-100;
-    }
-    
-
 
 
 
