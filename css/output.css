@@ -487,6 +487,30 @@ body {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
+.accordion-contaiter {
+  padding: 0.5rem;
+}
+
+.accordion-label {
+  cursor: pointer;
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.accordion-label::after {
+  float: right;
+  --tw-content: '+';
+  content: var(--tw-content);
+}
+
+.accordion-label:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
 #header {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
@@ -514,12 +538,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  width: 33.333333%;
   border-radius: 0.375rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+}
+
+#src-input>.accordion-contaiter {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
   padding: 0.5rem;
 }
 

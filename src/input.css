@@ -10,6 +10,13 @@
     .button {
         @apply bg-blue-500 text-white rounded p-2 hover:bg-blue-600;
     }
+    .accordion-contaiter {
+        @apply p-2;
+    }
+
+    .accordion-label {
+        @apply p-2 text-slate-600 cursor-pointer after:content-['+'] after:float-right hover:bg-slate-200 hover:text-slate-800;
+    }
 
     #header {
         @apply text-slate-50 bg-green-700;
@@ -21,7 +28,10 @@
         @apply p-4 bg-slate-100;
     }
     #src-input>textarea {
-        @apply p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+        @apply w-1/3 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+    }
+    #src-input>.accordion-contaiter {
+        @apply w-1/4 p-2 mx-auto;
     }
     #src-input>button#src-submit {
         @apply mx-auto my-4 px-10 block;
