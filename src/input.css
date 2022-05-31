@@ -3,6 +3,38 @@
 @tailwind utilities;
 
 @layer components {
+    body {
+        @apply bg-slate-200;
+    }
+
+    .button {
+        @apply bg-blue-500 text-white rounded p-2 hover:bg-blue-600;
+    }
+
+    #header {
+        @apply text-slate-50 bg-green-700;
+    }
+    #header>h1 {
+        @apply py-4 pl-4 text-2xl font-black uppercase;
+    }
+    #src-input {
+        @apply p-4 bg-slate-100;
+    }
+    #src-input>textarea {
+        @apply p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+    }
+    #src-input>button#src-submit {
+        @apply mx-auto my-4 px-10 block;
+    }
+    #src-details {
+        @apply w-3/6 mx-auto p-4 bg-slate-200;
+    }
+    #modifier {
+        @apply p-4 bg-slate-100;
+    }
     
+
+
+
 
 }
