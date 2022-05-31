@@ -596,7 +596,7 @@ h3 {
   padding: 0.5rem;
 }
 
-#src-input>button#src-submit {
+#src-input>button#address-list-submit {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;

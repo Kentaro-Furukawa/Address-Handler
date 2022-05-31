@@ -50,7 +50,7 @@
     #src-input .accordion-content input {
         @apply w-full p-2 border-2 rounded-md;
     }
-    #src-input>button#src-submit {
+    #src-input>button#address-list-submit {
         @apply mx-auto my-4 px-10 block;
     }
     #src-summary {

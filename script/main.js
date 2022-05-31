@@ -1,3 +1,5 @@
+// Accordion
+
 const accordion = document.querySelectorAll('.accordion-label');
 const accordionArray = [...accordion];
 
@@ -11,3 +13,20 @@ accordionArray.forEach(element => {
     }
   })
 });
+
+
+// Validation for input address list
+
+const addressListSubmit = document.querySelector('#address-list-submit');
+
+const inputAddressListValidation = () => {
+    const inputAddressList = document.querySelector('#input-address-list').value;
+    const inputLineLength = inputAddressList.split(/\r\n|\r|\n/).length;
+    console.log(inputLineLength)
+}
+
+addressListSubmit.addEventListener('click', e => {
+    e.preventDefault();
+    inputAddressListValidation();
+})
+
