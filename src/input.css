@@ -77,14 +77,20 @@
     #duplicate-list {
         @apply bg-yellow-500;
     }
-    #result-summary {
+    #result {
         @apply w-4/5 mx-auto py-4;
     }
-    #result-summary h2 {
+    #result h2 {
         @apply text-center;
     }
-    #result-summary p {
+    #result p {
         @apply text-center;
+    }
+    #result ol {
+        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-green-50 list-decimal list-inside rounded-md;
+    }
+    #result ol li {
+        @apply py-1 px-4 font-mono odd:bg-green-100 first:pt-4 last:pb-4;
     }
 
 
