@@ -1,12 +1,13 @@
-const accordion = document.getElementsByClassName('accordion-label');
+const accordion = document.querySelectorAll('.accordion-label');
+const accordionArray = [...accordion];
 
-for (i=0; i<accordion.length; i++) {
-  accordion[i].addEventListener('click', function () {
-    this.classList.toggle('active')
-    let panel = this.nextElementSibling;
+accordionArray.forEach(element => {
+    element.addEventListener('click', function () {
+    element.classList.toggle('active')
+    let panel = element.nextElementSibling;
     if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
         } else {panel.style.maxHeight = panel.scrollHeight + 'px';
     }
   })
-}
+});
