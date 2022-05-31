@@ -17,14 +17,19 @@ accordionArray.forEach(element => {
 
 // Validation for input address list
 
-const addressListSubmit = document.querySelector('#address-list-submit');
 let inputLineCount = 0;
 let inputAtCount = 0;
+const addressListSubmit = document.querySelector('#address-list-submit');
+const inputLineCountElm = document.querySelector('#input-line-count');
+const inputAtCountElm = document.querySelector('#input-at-count');
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value;
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
+    inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
     inputAtCount = (inputAddressList.match(/@/g) || []).length;
+    inputAtCountElm.innerText = `@ Count : ${inputAtCount}`;
+
 }
 
 addressListSubmit.addEventListener('click', e => {
