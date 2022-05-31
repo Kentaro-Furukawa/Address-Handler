@@ -606,7 +606,7 @@ h3 {
   padding-right: 2.5rem;
 }
 
-#src-summary {
+#input-summary {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
   padding-top: 1rem;
@@ -614,7 +614,7 @@ h3 {
   text-align: center;
 }
 
-#src-summary>p {
+#input-summary>p {
   margin-top: 0.5rem;
 }
 

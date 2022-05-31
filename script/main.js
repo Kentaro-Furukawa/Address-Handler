@@ -18,15 +18,18 @@ accordionArray.forEach(element => {
 // Validation for input address list
 
 const addressListSubmit = document.querySelector('#address-list-submit');
+let inputLineCount = 0;
+let inputAtCount = 0;
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value;
-    const inputLineLength = inputAddressList.split(/\r\n|\r|\n/).length;
-    console.log(inputLineLength)
+    inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
+    inputAtCount = (inputAddressList.match(/@/g) || []).length;
 }
 
 addressListSubmit.addEventListener('click', e => {
     e.preventDefault();
     inputAddressListValidation();
+
 })
 

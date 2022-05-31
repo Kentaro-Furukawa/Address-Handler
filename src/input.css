@@ -53,10 +53,10 @@
     #src-input>button#address-list-submit {
         @apply mx-auto my-4 px-10 block;
     }
-    #src-summary {
+    #input-summary {
         @apply py-4 text-center bg-slate-200;
     }
-    #src-summary>p {
+    #input-summary>p {
         @apply mt-2;
     }
     #validation-details {
