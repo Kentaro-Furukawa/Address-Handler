@@ -41,16 +41,13 @@ const inputAddressListValidation = () => {
 
     inputLineArray.forEach((element, index) => {
         const lineNo = index + 1;
-        // console.log('element : ', element);
-        // console.log('LineNo : ', lineNo);
 
         element.split(/,|;|\s/).forEach((item) => {
-            console.log('item : ', item);
-            console.log(emailRegex);
-            console.log('item.match(emailRegex) : ', item.match(emailRegex));
             let address = item.match(emailRegex);
-            console.log('address : ', address);
-            // inputAddressArray = [...inputAddressArray, ...address];
+            // console.log('address : ', address);
+            if(address) {
+            inputAddressArray = [...inputAddressArray, ...address];
+        }
         })
 
 
@@ -68,5 +65,5 @@ addressListSubmit.addEventListener('click', e => {
     inputAddressListValidation();
     console.log('line', inputLineArray);
     console.log(inputItemArray);
-    console.log('address: ', inputAddressArray);
+    console.log('inputAddressArray : ', inputAddressArray);
 })
