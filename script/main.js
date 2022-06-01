@@ -44,13 +44,10 @@ const inputAddressListValidation = () => {
 
         element.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
-            // console.log('address : ', address);
             if(address) {
             inputAddressArray = [...inputAddressArray, ...address];
         }
         })
-
-
 
         inputSummary.style.display = 'block';
         validationDetails.style.display = 'block';
@@ -63,7 +60,5 @@ const inputAddressListValidation = () => {
 addressListSubmit.addEventListener('click', e => {
     e.preventDefault();
     inputAddressListValidation();
-    console.log('line', inputLineArray);
-    console.log(inputItemArray);
     console.log('inputAddressArray : ', inputAddressArray);
 })
