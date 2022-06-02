@@ -39,10 +39,10 @@ const inputAddressListValidation = () => {
     inputAtCountElm.innerText = `@ Count : ${inputAtCount}`;
     inputLineArray = inputAddressList.split(/\r\n|\r|\n/);
 
-    inputLineArray.forEach((element, index) => {
+    inputLineArray.forEach((line, index) => {
         const lineNo = index + 1;
 
-        element.split(/,|;|\s/).forEach((item) => {
+        line.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
             if(address) {
             inputAddressArray = [...inputAddressArray, ...address];
