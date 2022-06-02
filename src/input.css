@@ -54,7 +54,7 @@
         @apply mx-auto my-4 px-10 block;
     }
     #input-summary {
-        @apply hidden py-4 text-center bg-slate-200;
+        @apply hidden p-4 w-1/2 mx-auto bg-slate-200 rounded-md;
     }
     #input-summary>p {
         @apply mt-2;
