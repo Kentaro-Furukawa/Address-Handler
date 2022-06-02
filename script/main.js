@@ -30,16 +30,16 @@ const inputLineCountElm = document.querySelector('#input-line-count');
 const inputAtCountElm = document.querySelector('#input-at-count');
 const validationDetails = document.querySelector('#validation-details');
 
-const INVALID_STATE = {
+const INVALID_STATES = Object.freeze({
     EMPTY: 'Line is empty',
     NO_VALID: 'No valid email address',
     INVALID_FORM: 'Invalid form email address',
     UNEXPECTED_CHAR: 'Unexpected character'
-}
+})
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value;
-    const inputRegex =  document.querySelector('#email-regex').value;
+    const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
@@ -49,13 +49,13 @@ const inputAddressListValidation = () => {
 
     inputLineArray.forEach((line, index) => {
         const lineNo = index + 1;
-        console.log('Each line:' , lineNo, line )
+        console.log('Each line:', lineNo, line)
 
         line.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
-            if(address) {
-            inputAddressArray = [...inputAddressArray, ...address];
-        }
+            if (address) {
+                inputAddressArray = [...inputAddressArray, ...address];
+            }
         })
 
         inputSummary.style.display = 'block';
