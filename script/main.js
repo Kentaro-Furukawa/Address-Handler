@@ -22,12 +22,20 @@ let inputLineCount = 0;
 let inputAtCount = 0;
 let inputLineArray = [];
 let inputItemArray = [];
+let InvalidLineArray = [];
 let inputAddressArray = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSummary = document.querySelector('#input-summary');
 const inputLineCountElm = document.querySelector('#input-line-count');
 const inputAtCountElm = document.querySelector('#input-at-count');
 const validationDetails = document.querySelector('#validation-details');
+
+const INVALID_STATE = {
+    EMPTY: 'Line is empty',
+    NO_VALID: 'No valid email address',
+    INVALID_FORM: 'Invalid form email address',
+    UNEXPECTED_CHAR: 'Unexpected character'
+}
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value;
@@ -41,6 +49,7 @@ const inputAddressListValidation = () => {
 
     inputLineArray.forEach((line, index) => {
         const lineNo = index + 1;
+        console.log('Each line:' , lineNo, line )
 
         line.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
