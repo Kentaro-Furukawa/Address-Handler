@@ -48,6 +48,10 @@ const inputAddressListValidation = () => {
     inputAtCountElm.innerText = `@ Count : ${inputAtCount}`;
     inputLineArray = inputAddressList.split(/\r\n|\r|\n/);
 
+    while (invalidListContainer.firstChild) {
+        invalidListContainer.removeChild(invalidListContainer.firstChild);
+    }
+
     inputLineArray.forEach((element, index) => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
@@ -56,7 +60,6 @@ const inputAddressListValidation = () => {
             if (address) {
                 inputAddressArray = [...inputAddressArray, ...address];
             } else {
-                console.log(`${lineNo} : Invalid ${item}`);
                 let invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
@@ -70,7 +73,6 @@ const inputAddressListValidation = () => {
         }
     })
 }
-
 
 
 addressListSubmit.addEventListener('click', e => {
