@@ -47,25 +47,19 @@ const inputAddressListValidation = () => {
     inputAtCountElm.innerText = `@ Count : ${inputAtCount}`;
     inputLineArray = inputAddressList.split(/\r\n|\r|\n/);
 
-    inputLineArray.forEach((line, index) => {
+    inputLineArray.forEach((element, index) => {
         const lineNo = index + 1;
-        const targetLine = `${lineNo} : ${line}`;
-
-        console.log(targetLine);
-
-
-
-        line.split(/,|;|\s/).forEach((item) => {
+        element.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
             if (address) {
                 inputAddressArray = [...inputAddressArray, ...address];
+            } else {
+                console.log(`${lineNo} : Invalid ${item}`);
             }
         })
-
         inputSummary.style.display = 'block';
         validationDetails.style.display = 'block';
     })
-
 }
 
 
