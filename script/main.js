@@ -22,7 +22,7 @@ let inputLineCount = 0;
 let inputAtCount = 0;
 let inputLineArray = [];
 let inputItemArray = [];
-let InvalidLineArray = [];
+let invalidLineArray = [];
 let inputAddressArray = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSummary = document.querySelector('#input-summary');
@@ -32,13 +32,13 @@ const validationDetails = document.querySelector('#validation-details');
 
 const INVALID_STATES = Object.freeze({
     EMPTY: 'Line is empty',
-    NO_VALID: 'No valid email address',
-    INVALID_FORM: 'Invalid form email address',
-    UNEXPECTED_CHAR: 'Unexpected character'
+    NO_VALID_ITEM: 'No valid email address',
+    INVALID_FORM_ITEM: 'Invalid form email address',
+    UNEXPECTED_CHARACTER: 'Unexpected character'
 })
 
 const inputAddressListValidation = () => {
-    const inputAddressList = document.querySelector('#input-address-list').value;
+    const inputAddressList = document.querySelector('#input-address-list').value.trim();
     const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
@@ -49,7 +49,11 @@ const inputAddressListValidation = () => {
 
     inputLineArray.forEach((line, index) => {
         const lineNo = index + 1;
-        console.log('Each line:', lineNo, line)
+        const targetLine = `${lineNo} : ${line}`;
+
+        console.log(targetLine);
+
+
 
         line.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
