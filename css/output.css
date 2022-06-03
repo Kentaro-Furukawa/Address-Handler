@@ -606,6 +606,16 @@ h3 {
   padding-right: 2.5rem;
 }
 
+#input-section-message {
+  display: none;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 #input-summary {
   margin-left: auto;
   margin-right: auto;

@@ -25,6 +25,7 @@ let inputItemArray = [];
 let invalidLineArray = [];
 let inputAddressArray = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
+const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
 const inputLineCountElm = document.querySelector('#input-line-count');
 const inputAtCountElm = document.querySelector('#input-at-count');
@@ -42,6 +43,8 @@ const inputAddressListValidation = () => {
     const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputAddressArray = [];
+    inputSectionMessage.innerText = ''
+    inputSectionMessage.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
     inputAtCount = (inputAddressList.match(/@/g) || []).length;
@@ -50,6 +53,12 @@ const inputAddressListValidation = () => {
 
     while (invalidListContainer.firstChild) {
         invalidListContainer.removeChild(invalidListContainer.firstChild);
+    }
+
+    if (!(inputAddressList)){
+        inputSectionMessage.innerText = 'Textarea is empty, input something.'
+        inputSectionMessage.style.display = 'block';
+        return
     }
 
     inputLineArray.forEach((element, index) => {

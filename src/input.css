@@ -53,6 +53,9 @@
     #src-input>button#address-list-submit {
         @apply mx-auto my-4 px-10 block;
     }
+    #input-section-message {
+        @apply hidden text-center text-red-500 font-bold text-lg;
+    }
     #input-summary {
         @apply hidden p-4 w-1/2 mx-auto bg-slate-200 rounded-md;
     }
