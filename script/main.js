@@ -31,10 +31,8 @@ const inputAtCountElm = document.querySelector('#input-at-count');
 const validationDetails = document.querySelector('#validation-details');
 
 const INVALID_STATES = Object.freeze({
-    EMPTY: 'Line is empty',
-    NO_VALID_ITEM: 'No valid email address',
-    INVALID_FORM_ITEM: 'Invalid form email address',
-    UNEXPECTED_CHARACTER: 'Unexpected character'
+    NO_VALID_ITEM: 'No valid email address in the line',
+    INVALID_FORM_ITEM: 'Invalid form email address'
 })
 
 const inputAddressListValidation = () => {
