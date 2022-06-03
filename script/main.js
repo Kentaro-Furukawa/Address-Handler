@@ -49,13 +49,18 @@ const inputAddressListValidation = () => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
             let address = item.match(emailRegex);
+            console.log('Address item:', address)
             if (address) {
                 inputAddressArray = [...inputAddressArray, ...address];
             } else {
                 console.log(`${lineNo} : Invalid ${item}`);
+                let invalidListItem = document.createElement('li');
+                invalidListItem.innerText = `${lineNo} : ${item}`;
+                document.querySelector('#invalid-list').append(invalidListItem);
             }
         })
         inputSummary.style.display = 'block';
+
         validationDetails.style.display = 'block';
     })
 }
