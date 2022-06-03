@@ -642,6 +642,7 @@ h3 {
 
 #invalid {
   margin-bottom: 1rem;
+  display: none;
 }
 
 #invalid-list {
@@ -651,6 +652,7 @@ h3 {
 
 #duplicate {
   margin-bottom: 1rem;
+  display: none;
 }
 
 #duplicate-list {

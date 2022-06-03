@@ -66,13 +66,13 @@
         @apply mt-2 p-4 text-white rounded-md;
     }
     #invalid {
-        @apply mb-4;
+        @apply hidden mb-4;
     }
     #invalid-list {
         @apply bg-red-500;
     }
     #duplicate {
-        @apply mb-4;
+        @apply hidden mb-4;
     }
     #duplicate-list {
         @apply bg-yellow-500;

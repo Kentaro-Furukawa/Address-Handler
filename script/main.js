@@ -29,6 +29,8 @@ const inputSummary = document.querySelector('#input-summary');
 const inputLineCountElm = document.querySelector('#input-line-count');
 const inputAtCountElm = document.querySelector('#input-at-count');
 const validationDetails = document.querySelector('#validation-details');
+const invalidSection = document.querySelector('#invalid');
+const invalidListContainer = document.querySelector('#invalid-list');
 
 const INVALID_STATES = Object.freeze({
     NO_VALID_ITEM: 'No valid email address in the line',
@@ -39,6 +41,7 @@ const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value.trim();
     const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
+    inputAddressArray = [];
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
     inputAtCount = (inputAddressList.match(/@/g) || []).length;
@@ -56,12 +59,15 @@ const inputAddressListValidation = () => {
                 console.log(`${lineNo} : Invalid ${item}`);
                 let invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
-                document.querySelector('#invalid-list').append(invalidListItem);
+                invalidListContainer.append(invalidListItem);
             }
         })
         inputSummary.style.display = 'block';
 
-        validationDetails.style.display = 'block';
+        if (invalidListContainer.hasChildNodes()) {
+            validationDetails.style.display = 'block';
+            invalidSection.style.display = 'block';
+        }
     })
 }
 
