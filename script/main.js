@@ -24,6 +24,7 @@ let inputLineArray = [];
 let inputItemArray = [];
 let invalidLineArray = [];
 let inputAddressArray = [];
+const duplicateAddress = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
@@ -67,7 +68,13 @@ const inputAddressListValidation = () => {
             let address = item.match(emailRegex);
             console.log('Address item:', address)
             if (address) {
-                inputAddressArray = [...inputAddressArray, ...address];
+                // check if there is duplicate address in inputAddressArray.
+
+
+
+
+                // inputAddressArray = [...inputAddressArray, ...address];
+
             } else {
                 let invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
