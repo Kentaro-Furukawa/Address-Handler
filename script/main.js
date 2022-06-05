@@ -56,7 +56,7 @@ const inputAddressListValidation = () => {
         invalidListContainer.removeChild(invalidListContainer.firstChild);
     }
 
-    if (!(inputAddressList)){
+    if (!(inputAddressList)) {
         inputSectionMessage.innerText = 'Textarea is empty, input something.'
         inputSectionMessage.style.display = 'block';
         return
@@ -65,14 +65,13 @@ const inputAddressListValidation = () => {
     inputLineArray.forEach((element, index) => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
-            let address = item.match(emailRegex);
-            console.log('Address item:', address)
-            if (address) {
-                // check if there is duplicate address in inputAddressArray.
-
-
-
-
+            const targetAddress = item.match(emailRegex);
+            if (targetAddress) {
+                const addressObj = {
+                    lineNo: lineNo,
+                    address: targetAddress[0]
+                };
+                inputAddressArray.push(addressObj);
                 // inputAddressArray = [...inputAddressArray, ...address];
 
             } else {
@@ -81,18 +80,29 @@ const inputAddressListValidation = () => {
                 invalidListContainer.append(invalidListItem);
             }
         })
+    })
+
+        // check duplicate   inputAddressArray ::::
+        console.log('inputAddressArray', inputAddressArray)
+
+        
+
+
+
+
+
         inputSummary.style.display = 'block';
 
         if (invalidListContainer.hasChildNodes()) {
             validationDetails.style.display = 'block';
             invalidSection.style.display = 'block';
         }
-    })
+
 }
 
 
 addressListSubmit.addEventListener('click', e => {
     e.preventDefault();
     inputAddressListValidation();
-    console.log('inputAddressArray : ', inputAddressArray);
+    // console.log('inputAddressArray : ', inputAddressArray);
 })
