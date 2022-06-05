@@ -87,6 +87,13 @@ const inputAddressListValidation = () => {
 
         
 
+        // 
+        // 
+        // 　　{ 'email address' : [lineNo, lineNo,,,,],  }
+        // Loop duplicateItems and create li emement like this ->> <li><span>12, 15</span>: emailexaple@gmail.com </li>
+
+
+
 
 
 
