@@ -66,33 +66,17 @@ const inputAddressListValidation = () => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
             const targetAddress = item.match(emailRegex);
-            if (targetAddress) {
-                const addressObj = {
-                    lineNo: lineNo,
-                    address: targetAddress[0]
-                };
-                inputAddressArray.push(addressObj);
-                // inputAddressArray = [...inputAddressArray, ...address];
-
-            } else {
+            if (!(targetAddress)) {
                 let invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
+            } else {
+
+
+
             }
         })
     })
-
-        // check duplicate   inputAddressArray ::::
-        console.log('inputAddressArray', inputAddressArray)
-
-        
-
-        // 
-        // 
-        // 　　{ 'email address' : [lineNo, lineNo,,,,],  }
-        // Loop duplicateItems and create li emement like this ->> <li><span>12, 15</span>: emailexaple@gmail.com </li>
-
-
 
 
 
