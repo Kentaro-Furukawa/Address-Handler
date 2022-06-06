@@ -24,7 +24,7 @@ let inputLineArray = [];
 let inputItemArray = [];
 let invalidLineArray = [];
 let inputAddressArray = [];
-const duplicateAddress = [];
+let addressLineNo = {};
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
@@ -71,12 +71,8 @@ const inputAddressListValidation = () => {
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
             } else {
-                
-
-
-
-
-
+                // if aleady target address exists in addressLineNo, push the lineNo, if not add new key pair.
+                addressLineNo[targetAddress[0]] ? addressLineNo[targetAddress[0]].push(lineNo) : addressLineNo[targetAddress[0]] = [lineNo];
             }
         })  //  Loop for .split(/,|;|\s/)
 
@@ -84,15 +80,16 @@ const inputAddressListValidation = () => {
     })   //  Loop for .split(/\r\n|\r|\n/) 
 
 
+    console.log(addressLineNo)
 
 
 
-        inputSummary.style.display = 'block';
+    inputSummary.style.display = 'block';
 
-        if (invalidListContainer.hasChildNodes()) {
-            validationDetails.style.display = 'block';
-            invalidSection.style.display = 'block';
-        }
+    if (invalidListContainer.hasChildNodes()) {
+        validationDetails.style.display = 'block';
+        invalidSection.style.display = 'block';
+    }
 
 }
 
