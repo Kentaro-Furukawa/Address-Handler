@@ -104,7 +104,7 @@ const inputAddressListValidation = () => {
         duplicateAddresses = duplicateAddresses.filter((element) => element[1].length > 1);
         for (duplicateAddress of duplicateAddresses) {
             const duplicateListItem = document.createElement('li');
-            duplicateListItem.innerText = `${duplicateAddress[1].toString().replace(',', ', ')} : ${duplicateAddress[0]}`;
+            duplicateListItem.innerText = `${duplicateAddress[1].toString().replaceAll(',', ', ')} : ${duplicateAddress[0]}`;
             duplicateListContainer.append(duplicateListItem);
         }
         duplicateSection.style.display = 'block';
