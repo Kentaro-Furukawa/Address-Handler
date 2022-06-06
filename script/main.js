@@ -24,8 +24,9 @@ let inputLineArray = [];
 let inputItemArray = [];
 let invalidLineArray = [];
 let inputAddressArray = [];
-let addressLineNo = {};
+let validAddresses = {};
 let duplicateAddresses = [];
+let validAddressesArray = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
@@ -47,7 +48,7 @@ const inputAddressListValidation = () => {
     const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputAddressArray = [];
-    addressLineNo = {};
+    validAddresses = {};
     inputSectionMessage.innerText = ''
     inputSectionMessage.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
@@ -75,16 +76,14 @@ const inputAddressListValidation = () => {
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
             } else {
-                // if aleady target address exists in addressLineNo, push the lineNo, if not add new key pair.
-                addressLineNo[targetAddress[0]] ? addressLineNo[targetAddress[0]].push(lineNo) : addressLineNo[targetAddress[0]] = [lineNo];
+                // if aleady target address exists in validAddresses, push the lineNo, if not add new key pair.
+                validAddresses[targetAddress[0]] ? validAddresses[targetAddress[0]].push(lineNo) : validAddresses[targetAddress[0]] = [lineNo];
             }
         })  //  Loop for .split(/,|;|\s/)
     })   //  Loop for .split(/\r\n|\r|\n/) 
 
-    console.log(addressLineNo)
 
-    duplicateAddresses = Object.entries(addressLineNo);
-
+    duplicateAddresses = Object.entries(validAddresses);
     if (duplicateAddresses) {
         duplicateAddresses = duplicateAddresses.filter((element) => element[1].length > 1);
         for (duplicateAddress of duplicateAddresses) {
@@ -96,15 +95,18 @@ const inputAddressListValidation = () => {
         duplicateSection.style.display = 'block';
     }
 
-
-
-
     inputSummary.style.display = 'block';
 
     if (invalidListContainer.hasChildNodes()) {
         validationDetails.style.display = 'block';
         invalidSection.style.display = 'block';
     }
+
+    validAddressesArray = Object.keys(validAddresses);
+    
+
+
+
 
 }
 
