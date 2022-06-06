@@ -670,6 +670,15 @@ h3 {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.duplicate-message {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
 #result {
   margin-left: auto;
   margin-right: auto;
@@ -705,6 +714,7 @@ h3 {
   padding-bottom: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  text-indent: 0.5rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 

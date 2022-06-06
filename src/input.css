@@ -80,6 +80,9 @@
     #duplicate-list {
         @apply bg-yellow-500;
     }
+    .duplicate-message {
+        @apply my-4 pl-2 text-lg font-bold;
+    }
     #result {
         @apply hidden w-4/5 mx-auto py-4;
     }
@@ -93,7 +96,7 @@
         @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;
     }
     #result ol li {
-        @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4;
+        @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
     }
 
 
