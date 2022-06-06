@@ -67,16 +67,21 @@ const inputAddressListValidation = () => {
         element.split(/,|;|\s/).forEach((item) => {
             const targetAddress = item.match(emailRegex);
             if (!(targetAddress)) {
-                let invalidListItem = document.createElement('li');
+                const invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
             } else {
+                
+
+
 
 
 
             }
-        })
-    })
+        })  //  Loop for .split(/,|;|\s/)
+
+
+    })   //  Loop for .split(/\r\n|\r|\n/) 
 
 
 
