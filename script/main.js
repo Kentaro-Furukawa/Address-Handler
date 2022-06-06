@@ -57,7 +57,7 @@ const inputAddressListValidation = () => {
     validationDetails.style.display = 'none';
     invalidSection.style.display = 'none';
     duplicateSection.style.display = 'none';
-    resultListItem.innerText = '';
+    resultArrayLenght.innerText = '';
     resultSection.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
