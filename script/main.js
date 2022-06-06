@@ -75,8 +75,6 @@ const inputAddressListValidation = () => {
                 addressLineNo[targetAddress[0]] ? addressLineNo[targetAddress[0]].push(lineNo) : addressLineNo[targetAddress[0]] = [lineNo];
             }
         })  //  Loop for .split(/,|;|\s/)
-
-
     })   //  Loop for .split(/\r\n|\r|\n/) 
 
 
