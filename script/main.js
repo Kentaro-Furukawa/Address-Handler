@@ -25,6 +25,7 @@ let inputItemArray = [];
 let invalidLineArray = [];
 let inputAddressArray = [];
 let addressLineNo = {};
+let duplicateAddresses = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
@@ -33,6 +34,8 @@ const inputAtCountElm = document.querySelector('#input-at-count');
 const validationDetails = document.querySelector('#validation-details');
 const invalidSection = document.querySelector('#invalid');
 const invalidListContainer = document.querySelector('#invalid-list');
+const duplicateSection = document.querySelector('#duplicate');
+const duplicateListContainer = document.querySelector('#duplicate-list');
 
 const INVALID_STATES = Object.freeze({
     NO_VALID_ITEM: 'No valid email address in the line',
@@ -44,6 +47,7 @@ const inputAddressListValidation = () => {
     const inputRegex = document.querySelector('#email-regex').value;
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputAddressArray = [];
+    addressLineNo = {};
     inputSectionMessage.innerText = ''
     inputSectionMessage.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
@@ -77,8 +81,21 @@ const inputAddressListValidation = () => {
         })  //  Loop for .split(/,|;|\s/)
     })   //  Loop for .split(/\r\n|\r|\n/) 
 
-
     console.log(addressLineNo)
+
+    duplicateAddresses = Object.entries(addressLineNo);
+
+    if (duplicateAddresses) {
+        duplicateAddresses = duplicateAddresses.filter((element) => element[1].length > 1);
+        for (duplicateAddress of duplicateAddresses) {
+            const duplicateListItem = document.createElement('li');
+            duplicateListItem.innerText = `${duplicateAddress[1].toString().replace(',', ', ')} : ${duplicateAddress[0]}`;
+            duplicateListContainer.append(duplicateListItem);
+        }
+        validationDetails.style.display = 'block';
+        duplicateSection.style.display = 'block';
+    }
+
 
 
 
