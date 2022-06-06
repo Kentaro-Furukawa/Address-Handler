@@ -90,10 +90,10 @@
         @apply text-center;
     }
     #result ol {
-        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-green-50 list-decimal list-inside rounded-md;
+        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;
     }
     #result ol li {
-        @apply py-1 px-4 font-mono odd:bg-green-100 first:pt-4 last:pb-4;
+        @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4;
     }
 
 

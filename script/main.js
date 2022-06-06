@@ -37,6 +37,8 @@ const invalidSection = document.querySelector('#invalid');
 const invalidListContainer = document.querySelector('#invalid-list');
 const duplicateSection = document.querySelector('#duplicate');
 const duplicateListContainer = document.querySelector('#duplicate-list');
+const resultSection = document.querySelector('#result');
+const resultListContainer = document.querySelector('#result-list');
 
 const INVALID_STATES = Object.freeze({
     NO_VALID_ITEM: 'No valid email address in the line',
@@ -102,9 +104,16 @@ const inputAddressListValidation = () => {
         invalidSection.style.display = 'block';
     }
 
-    validAddressesArray = Object.keys(validAddresses);
-    
+    if (validAddresses) {
+        validAddressesArray = Object.keys(validAddresses);
+        for (validAddress of validAddressesArray) {
+            const resultListItem = document.createElement('li');
+            resultListItem.innerText = `${validAddress}`;
+            resultListContainer.append(resultListItem);
+        }
+        resultSection.style.display = 'block';
 
+    }
 
 
 
