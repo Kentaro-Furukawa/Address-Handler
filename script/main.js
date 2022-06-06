@@ -52,11 +52,12 @@ const inputAddressListValidation = () => {
     const emailRegex = new RegExp(inputRegex, 'gi');
     inputAddressArray = [];
     validAddresses = {};
-    inputSectionMessage.innerText = ''
+    inputSectionMessage.innerText = '';
     inputSectionMessage.style.display = 'none';
     validationDetails.style.display = 'none';
     invalidSection.style.display = 'none';
     duplicateSection.style.display = 'none';
+    resultListItem.innerText = '';
     resultSection.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
