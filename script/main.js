@@ -39,6 +39,7 @@ const duplicateSection = document.querySelector('#duplicate');
 const duplicateListContainer = document.querySelector('#duplicate-list');
 const resultSection = document.querySelector('#result');
 const resultArrayLenght = document.querySelector('#result-array-lenght');
+const copyWholeResult = document.querySelector('#copy-whole-result');
 const resultListContainer = document.querySelector('#result-list');
 
 const INVALID_STATES = Object.freeze({
@@ -130,4 +131,8 @@ const inputAddressListValidation = () => {
 addressListSubmit.addEventListener('click', e => {
     e.preventDefault();
     inputAddressListValidation();
+})
+
+copyWholeResult.addEventListener('click', e => {
+    navigator.clipboard.writeText(validAddressesArray.toString().replaceAll(',',';'));
 })
