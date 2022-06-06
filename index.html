@@ -14,14 +14,17 @@
         <h1>Address Handler</h1>
     </section>
     <section id="src-input">
-        <textarea name="input-address-list" id="input-address-list" cols="30" rows="20" placeholder="Input a list here..." autofocus></textarea>
-        <div class="accordion-contaiter">
+        <textarea name="input-address-list" id="input-address-list" cols="30" rows="20"
+            placeholder="Input a list here..." autofocus></textarea>
+        <div class="accordion-container">
             <hr>
             <div class="accordion-label">Advanced Settings</div>
             <div class="accordion-content">
                 <label for="email-regex">Email Regex:</label>
-                <input type="text" name="email-regex" id="email-regex" class="font-mono" value="[A-z,0-9,.,_,%,+,-]{1,}\@[A-z,0-9,.,_,%,+,-]{1,}" />
-                <small class="text-slate-600 mb-4 block">FYR 👉 <a href="https://regexr.com/" target="_blank" class="hover:text-sky-600 underline">RegExr.com</a></small>
+                <input type="text" name="email-regex" id="email-regex" class="font-mono"
+                    value="[A-z,0-9,.,_,%,+,-]{1,}\@[A-z,0-9,.,_,%,+,-]{1,}" />
+                <small class="text-slate-600 mb-4 block">FYR 👉 <a href="https://regexr.com/" target="_blank"
+                        class="hover:text-sky-600 underline">RegExr.com</a></small>
             </div>
             <hr>
         </div>
@@ -47,7 +50,12 @@
     <section id="result">
         <h2>Result</h2>
         <p id="result-array-lenght"></p>
-        <button id="copy-whole-result">Copy</button>
+        <div class="copy-button-container">
+            <button id="copy-whole-result" class="group">
+                <span class="tooltip group-hover:scale-100"></span>
+                📋
+            </button>
+        </div>
         <ol id="result-list"></ol>
     </section>
     <section id="divider">

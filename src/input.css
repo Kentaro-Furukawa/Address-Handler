@@ -16,7 +16,7 @@
     .button {
         @apply bg-blue-500 text-white rounded p-2 hover:bg-blue-600;
     }
-    .accordion-contaiter {
+    .accordion-container {
         @apply p-2;
     }
     .accordion-label {
@@ -27,6 +27,15 @@
     }
     .accordion-content {
         @apply px-4 max-h-0 overflow-hidden transition-all duration-200 ease-linear;
+    }
+    .copy-button-container {
+        @apply w-1/2 mx-auto mb-4 text-right;
+    }
+    .tooltip {
+        @apply absolute bottom-14 right-0 scale-0 font-bold py-1 px-4 bg-gray-400 rounded-md transition-all duration-100 origin-bottom;
+    }
+    .tooltip::after {
+        @apply content-[''] absolute top-full right-4 -ml-2 border-8 border-solid border-t-gray-400 border-b-transparent border-x-transparent;
     }
 
     #header {
@@ -41,7 +50,7 @@
     #src-input>textarea {
         @apply w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
     }
-    #src-input>.accordion-contaiter {
+    #src-input>.accordion-container {
         @apply w-1/2 my-4 p-2 mx-auto;
     }
     #src-input .accordion-content {
@@ -91,6 +100,9 @@
     }
     #result p {
         @apply text-center;
+    }
+    #copy-whole-result {
+        @apply relative py-2 px-4 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-md;
     }
     #result ol {
         @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;

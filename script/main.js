@@ -40,12 +40,17 @@ const duplicateListContainer = document.querySelector('#duplicate-list');
 const resultSection = document.querySelector('#result');
 const resultArrayLenght = document.querySelector('#result-array-lenght');
 const copyWholeResult = document.querySelector('#copy-whole-result');
+const copyWholeResultTooltip = document.querySelector('#copy-whole-result > .tooltip')
 const resultListContainer = document.querySelector('#result-list');
 
-const INVALID_STATES = Object.freeze({
-    NO_VALID_ITEM: 'No valid email address in the line',
-    INVALID_FORM_ITEM: 'Invalid form email address'
-})
+window.addEventListener('load', (event) => {
+    copyWholeResultTooltip.innerText = 'Copy';
+  });
+
+// const INVALID_STATES = Object.freeze({
+//     NO_VALID_ITEM: 'No valid email address in the line',
+//     INVALID_FORM_ITEM: 'Invalid form email address'
+// })
 
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value.trim();
@@ -135,4 +140,9 @@ addressListSubmit.addEventListener('click', e => {
 
 copyWholeResult.addEventListener('click', e => {
     navigator.clipboard.writeText(validAddressesArray.toString().replaceAll(',',';'));
+    copyWholeResultTooltip.innerText = 'Copied!';
+})
+
+copyWholeResult.addEventListener('mouseout', e => {
+    copyWholeResultTooltip.innerText = 'Copy';
 })
