@@ -148,9 +148,6 @@
     #chunk-summary {
         @apply w-1/2 mx-auto mb-16 py-2 bg-gray-200 text-center rounded-md;
     }
-    /* #chunk-summary h3 {
-        @apply my-4;
-    } */
     #chunk-summary li {
         @apply mb-2 first:mt-2;
     }
