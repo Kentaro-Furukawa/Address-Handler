@@ -106,13 +106,17 @@ const inputAddressListValidation = () => {
     inputSummary.style.display = 'block';
 
     duplicateAddresses = Object.entries(validAddresses);
-    if (duplicateAddresses) {
+    if (duplicateAddresses.length > 0) {
         duplicateAddresses = duplicateAddresses.filter((element) => element[1].length > 1);
         for (duplicateAddress of duplicateAddresses) {
             const duplicateListItem = document.createElement('li');
             duplicateListItem.innerText = `${duplicateAddress[1].toString().replaceAll(',', ', ')} : ${duplicateAddress[0]}`;
             duplicateListContainer.append(duplicateListItem);
         }
+//        duplicateSection.style.display = 'block';   somehow doesn't as I meant be 🤔
+    }
+
+    if (duplicateListContainer.hasChildNodes()) {  //    I put these lines instead.
         duplicateSection.style.display = 'block';
     }
 

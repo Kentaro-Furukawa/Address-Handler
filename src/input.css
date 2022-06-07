@@ -96,16 +96,16 @@
         @apply hidden w-4/5 mx-auto py-4;
     }
     #result h2 {
-        @apply text-center;
+        @apply text-center mt-8 mb-4;
     }
     #result p {
         @apply text-center;
     }
     #copy-whole-result {
-        @apply relative py-2 px-4 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-md;
+        @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
     }
     #result ol {
-        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;
+        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside border-2 rounded-md;
     }
     #result ol li {
         @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
