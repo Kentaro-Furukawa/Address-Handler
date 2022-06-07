@@ -60,7 +60,7 @@
         @apply w-full p-2 border-2 rounded-md;
     }
     #src-input>button#address-list-submit {
-        @apply mx-auto my-4 px-10 block;
+        @apply mx-auto my-4 px-16 block;
     }
     #input-section-message {
         @apply hidden text-center text-red-500 font-bold text-lg;
@@ -110,6 +110,37 @@
     #result ol li {
         @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
     }
+
+    #divider {
+        @apply w-4/5 mx-auto pt-8;
+    }
+    #divider h2 {
+        @apply mb-8 text-center;
+    }
+    #divider-settings {
+        @apply w-1/2 mx-auto;
+    }
+    #divider h3 {
+        @apply mt-4 mb-6 text-center;
+    }
+    #divider-settings > div {
+        @apply mb-4 px-4 text-center;
+    }
+    #divider-settings input#maximum-number {
+        @apply w-16 py-1 text-center border-2 rounded-md;
+    }
+    #divider-settings input#devide-evenly {
+        @apply mr-2;
+    }
+    #devider-process-container {
+        @apply my-8 text-center;
+    }
+    #devider-process {
+        @apply bg-indigo-500 text-white rounded py-2 px-16 hover:bg-indigo-600;
+    }
+
+
+
 
 
 }

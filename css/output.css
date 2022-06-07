@@ -647,8 +647,8 @@ h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 #input-section-message {
@@ -800,6 +800,73 @@ h3 {
 #result ol li:nth-child(odd) {
   --tw-bg-opacity: 1;
   background-color: rgb(224 242 254 / var(--tw-bg-opacity));
+}
+
+#divider {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 2rem;
+}
+
+#divider h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#divider-settings {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#divider h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#divider-settings > div {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+#divider-settings input#maximum-number {
+  width: 4rem;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+#divider-settings input#devide-evenly {
+  margin-right: 0.5rem;
+}
+
+#devider-process-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#devider-process {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#devider-process:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
 .mb-4 {
