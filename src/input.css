@@ -148,14 +148,14 @@
     #chunk-summary {
         @apply w-1/2 mx-auto mb-16 py-2 bg-gray-200 text-center rounded-md;
     }
-    #chunk-summary h3 {
+    /* #chunk-summary h3 {
         @apply my-4;
-    }
+    } */
     #chunk-summary li {
-        @apply mb-2;
+        @apply mb-2 first:mt-2;
     }
     .chunk-card {
-        @apply w-1/2 mx-auto p-4 bg-indigo-100 rounded-md shadow-md;
+        @apply w-1/2 mx-auto mb-16 p-4 bg-indigo-100 rounded-md shadow-md;
     }
     .chunk-card h4 {
         @apply mb-4 p-2 text-center text-lg font-bold bg-gray-50 border-l-8 border-indigo-700 rounded-r-md;
