@@ -802,38 +802,38 @@ h3 {
   background-color: rgb(224 242 254 / var(--tw-bg-opacity));
 }
 
-#divider {
+#splitter {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   padding-top: 2rem;
 }
 
-#divider h2 {
+#splitter h2 {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-#divider-settings {
+#splitter-settings {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-#divider h3 {
+#splitter h3 {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-#divider-settings > div {
+#splitter-settings > div {
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
 }
 
-#divider-settings input#maximum-number {
+#splitter-settings input#maximum-number {
   width: 4rem;
   border-radius: 0.375rem;
   border-width: 2px;
@@ -842,17 +842,17 @@ h3 {
   text-align: center;
 }
 
-#divider-settings input#devide-evenly {
+#splitter-settings input#split-evenly {
   margin-right: 0.5rem;
 }
 
-#devider-process-container {
+#splitter-process-container {
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-#devider-process {
+#splitter-process {
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
@@ -864,7 +864,7 @@ h3 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#devider-process:hover {
+#splitter-process:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }

@@ -111,31 +111,31 @@
         @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
     }
 
-    #divider {
+    #splitter {
         @apply w-4/5 mx-auto pt-8;
     }
-    #divider h2 {
+    #splitter h2 {
         @apply mb-8 text-center;
     }
-    #divider-settings {
+    #splitter-settings {
         @apply w-1/2 mx-auto;
     }
-    #divider h3 {
+    #splitter h3 {
         @apply mt-4 mb-6 text-center;
     }
-    #divider-settings > div {
+    #splitter-settings > div {
         @apply mb-4 px-4 text-center;
     }
-    #divider-settings input#maximum-number {
+    #splitter-settings input#maximum-number {
         @apply w-16 py-1 text-center border-2 rounded-md;
     }
-    #divider-settings input#devide-evenly {
+    #splitter-settings input#split-evenly {
         @apply mr-2;
     }
-    #devider-process-container {
+    #splitter-process-container {
         @apply my-8 text-center;
     }
-    #devider-process {
+    #splitter-process {
         @apply bg-indigo-500 text-white rounded py-2 px-16 hover:bg-indigo-600;
     }
 
