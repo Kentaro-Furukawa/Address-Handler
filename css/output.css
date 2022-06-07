@@ -926,8 +926,9 @@ h3 {
   border-color: rgb(67 56 202 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
