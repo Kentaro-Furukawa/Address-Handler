@@ -113,7 +113,7 @@ const inputAddressListValidation = () => {
             duplicateListItem.innerText = `${duplicateAddress[1].toString().replaceAll(',', ', ')} : ${duplicateAddress[0]}`;
             duplicateListContainer.append(duplicateListItem);
         }
-//        duplicateSection.style.display = 'block';   somehow doesn't as I meant be 🤔
+//        duplicateSection.style.display = 'block';   somehow this line doesn't work as I meant be 🤔
     }
 
     if (duplicateListContainer.hasChildNodes()) {  //    I put these lines instead.
