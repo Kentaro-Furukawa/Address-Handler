@@ -51,6 +51,7 @@ const chunkCardsSection = document.querySelector('#chunk-cards');
 
 window.addEventListener('load', (event) => {
     copyWholeResultTooltip.innerText = 'Copy';
+    document.querySelector('#current-year').innerText = new Date().getFullYear();
 });
 
 // const INVALID_STATES = Object.freeze({
