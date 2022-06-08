@@ -147,6 +147,12 @@ const inputAddressListValidation = () => {
             splitterSection.style.display = 'block';
         }
     }
+
+    window.scroll({
+        top: addressListSubmit.offsetTop - 20,
+        behavior: 'smooth'
+      });
+
 }
 
 addressListSubmit.addEventListener('click', e => {
@@ -280,5 +286,11 @@ splitterProcessButton.addEventListener('click', e => {
     }
 
     chunkSection.style.display = 'block';
+
+    window.scroll({
+        top: splitterProcessButton.offsetTop - 20,
+        behavior: 'smooth'
+      });
+
 })
 
