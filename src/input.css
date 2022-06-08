@@ -4,13 +4,16 @@
 
 @layer components {
     body {
-        @apply pb-4 bg-slate-100;
+        @apply bg-slate-200;
     }
     h2 {
         @apply text-3xl;
     }
     h3 {
         @apply text-2xl;
+    }
+    hr {
+        @apply border-slate-300;
     }
 
     .button {
@@ -20,7 +23,7 @@
         @apply p-2;
     }
     .accordion-label {
-        @apply p-2 text-slate-600 cursor-pointer after:content-['+'] after:float-right hover:bg-slate-200 hover:text-slate-800;
+        @apply p-2 text-slate-600 cursor-pointer after:content-['+'] after:float-right hover:bg-slate-100 hover:text-slate-800;
     }
     .accordion-label.active {
         @apply after:content-['-'];
@@ -45,7 +48,7 @@
         @apply py-4 pl-4 text-2xl font-black uppercase;
     }
     #src-input {
-        @apply p-4 bg-slate-100;
+        @apply mt-8 p-4;
     }
     #src-input>textarea {
         @apply w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
@@ -66,7 +69,7 @@
         @apply hidden text-center text-red-500 font-bold text-lg;
     }
     #input-summary {
-        @apply hidden p-4 w-1/2 mx-auto text-center bg-slate-200 rounded-md;
+        @apply hidden p-4 w-1/2 mx-auto text-center bg-slate-100 rounded-md;
     }
     #input-summary>p {
         @apply mt-2;
@@ -146,7 +149,7 @@
         @apply text-center mb-8;
     }
     #chunk-summary {
-        @apply w-1/2 mx-auto mb-16 py-2 bg-slate-200 text-center rounded-md;
+        @apply w-1/2 mx-auto mb-16 py-2 bg-slate-100 text-center rounded-md;
     }
     #chunk-summary li {
         @apply mb-2 first:mt-2;

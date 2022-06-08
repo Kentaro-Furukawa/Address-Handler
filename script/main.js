@@ -210,11 +210,11 @@ const createChunkElements = (chunksArray) => {
 
         const chunkCardFirstItem = document.createElement('p');
         chunkCardFirstItem.classList.add('chunk-card-first-item');
-        chunkCardFirstItem.innerText = `${element[0]}`;
+        chunkCardFirstItem.innerText = `First: ${element[0]}`;
 
         const chunkCardLastItem = document.createElement('p');
         chunkCardLastItem.classList.add('chunk-card-last-item');
-        chunkCardLastItem.innerText = `${element[element.length - 1]}`;
+        chunkCardLastItem.innerText = `Last: ${element[element.length - 1]}`;
 
         const copyButtonContainer = document.createElement('div');
         copyButtonContainer.classList.add('copy-button-container');
