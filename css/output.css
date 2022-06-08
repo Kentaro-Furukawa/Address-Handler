@@ -806,6 +806,7 @@ h3 {
 #splitter {
   margin-left: auto;
   margin-right: auto;
+  display: none;
   width: 80%;
   padding-top: 2rem;
 }
@@ -873,6 +874,7 @@ h3 {
 #chunks {
   margin-left: auto;
   margin-right: auto;
+  display: none;
   width: 80%;
   padding-top: 2rem;
 }

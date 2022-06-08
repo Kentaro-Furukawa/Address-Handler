@@ -43,7 +43,10 @@ const resultArrayLenght = document.querySelector('#result-array-lenght');
 const copyWholeResult = document.querySelector('#copy-whole-result');
 const copyWholeResultTooltip = document.querySelector('#copy-whole-result > .tooltip')
 const resultListContainer = document.querySelector('#result-list');
+const splitterSection = document.querySelector('#splitter');
 const splitterProcessButton = document.querySelector('#splitter-process');
+const chunkSection = document.querySelector('#chunks');
+const chunkCardsSection = document.querySelector('#chunk-cards');
 
 window.addEventListener('load', (event) => {
     copyWholeResultTooltip.innerText = 'Copy';
@@ -67,6 +70,8 @@ const inputAddressListValidation = () => {
     duplicateSection.style.display = 'none';
     resultArrayLenght.innerText = '';
     resultSection.style.display = 'none';
+    splitterSection.style.display = 'none';
+    chunkSection.style.display = 'none';
     inputLineCount = inputAddressList.split(/\r\n|\r|\n/).length;
     inputLineCountElm.innerText = `Line Count : ${inputLineCount}`;
     inputAtCount = (inputAddressList.match(/@/g) || []).length;
@@ -136,6 +141,10 @@ const inputAddressListValidation = () => {
             resultListContainer.append(resultListItem);
         }
         resultSection.style.display = 'block';
+
+        if (validAddressesArray.length > 1) {
+            splitterSection.style.display = 'block';
+        }
     }
 }
 
@@ -175,6 +184,12 @@ const evenlySliceIntoChunks = (arr, maxChunkSize) => {
     return res;
 }
 
+const createChunkElements = (chunksArray) => {
+
+    console.log('going to create chunk elements and append to the section.')
+    console.log('chunk array --> ', chunksArray);
+}
+
 splitterProcessButton.addEventListener('click', e => {
     chunksArray = [];
     const maxChunkSize = parseInt(document.querySelector('#maximum-number').value);
@@ -183,6 +198,12 @@ splitterProcessButton.addEventListener('click', e => {
     } else {
         chunksArray = unevenlySliceIntoChunks(validAddressesArray, maxChunkSize)
     }
+
+    if (chunksArray.length > 0) {
+        createChunkElements(chunksArray);
+    }
+
+    chunkSection.style.display = 'block';
 })
 
 
