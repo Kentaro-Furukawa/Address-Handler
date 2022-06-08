@@ -187,7 +187,7 @@ const evenlySliceIntoChunks = (arr, maxChunkSize) => {
 
 const createChunkElements = (chunksArray) => {
 
-    document.querySelector('#chunks > h2:first-child').innerText = `You have ${chunksArray.length} chunks 👐`;
+    document.querySelector('#chunks > h2:first-child').innerText = `You have ${chunksArray.length} chunks.`;
 
     chunksArray.forEach((element, index) => {   // create elements for chunk summary part
         const chunkSummaryListItem = document.createElement('li');
