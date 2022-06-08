@@ -155,14 +155,28 @@ copyWholeResult.addEventListener('mouseout', e => {
 // Splitter :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 // if  document.querySelector('#split-evenly').checked === false
-const unevenlySliceIntoChunks = (arr, chunkSize) => {
+const unevenlySliceIntoChunks = (arr, maxChunkSize) => {
     const res = [];
+    for (let i = 0; i < arr.length; i += maxChunkSize) {
+        const chunk = arr.slice(i, i + maxChunkSize);
+        res.push(chunk);
+    }
+    return res;
+}
+
+// if  document.querySelector('#split-evenly').checked === true
+const evenlySliceIntoChunks = (arr, maxChunkSize) => {
+    const res = [];
+    const chunkSize = Math.ceil(arr.length / (Math.ceil(arr.length / maxChunkSize)));
+    console.log(chunkSize);
     for (let i = 0; i < arr.length; i += chunkSize) {
         const chunk = arr.slice(i, i + chunkSize);
         res.push(chunk);
     }
     return res;
 }
+
+
 
 
 
