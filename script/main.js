@@ -27,6 +27,7 @@ let inputAddressArray = [];
 let validAddresses = {};
 let duplicateAddresses = [];
 let validAddressesArray = [];
+let chunksArray = [];
 const addressListSubmit = document.querySelector('#address-list-submit');
 const inputSectionMessage = document.querySelector('#input-section-message');
 const inputSummary = document.querySelector('#input-summary');
@@ -42,10 +43,11 @@ const resultArrayLenght = document.querySelector('#result-array-lenght');
 const copyWholeResult = document.querySelector('#copy-whole-result');
 const copyWholeResultTooltip = document.querySelector('#copy-whole-result > .tooltip')
 const resultListContainer = document.querySelector('#result-list');
+const splitterProcessButton = document.querySelector('#splitter-process');
 
 window.addEventListener('load', (event) => {
     copyWholeResultTooltip.innerText = 'Copy';
-  });
+});
 
 // const INVALID_STATES = Object.freeze({
 //     NO_VALID_ITEM: 'No valid email address in the line',
@@ -100,7 +102,7 @@ const inputAddressListValidation = () => {
                 // if aleady target address exists in validAddresses, push the lineNo, if not add new key pair.
                 validAddresses[targetAddress[0]] ? validAddresses[targetAddress[0]].push(lineNo) : validAddresses[targetAddress[0]] = [lineNo];
             }
-        }) 
+        })
     })
 
     inputSummary.style.display = 'block';
@@ -113,7 +115,7 @@ const inputAddressListValidation = () => {
             duplicateListItem.innerText = `${duplicateAddress[1].toString().replaceAll(',', ', ')} : ${duplicateAddress[0]}`;
             duplicateListContainer.append(duplicateListItem);
         }
-//        duplicateSection.style.display = 'block';   somehow this line doesn't work as I meant be 🤔
+        //        duplicateSection.style.display = 'block';   somehow this line doesn't work as I meant be 🤔
     }
 
     if (duplicateListContainer.hasChildNodes()) {  //    I put these lines instead.
@@ -143,7 +145,7 @@ addressListSubmit.addEventListener('click', e => {
 })
 
 copyWholeResult.addEventListener('click', e => {
-    navigator.clipboard.writeText(validAddressesArray.toString().replaceAll(',',';'));
+    navigator.clipboard.writeText(validAddressesArray.toString().replaceAll(',', ';'));
     copyWholeResultTooltip.innerText = 'Copied!';
 })
 
@@ -154,7 +156,6 @@ copyWholeResult.addEventListener('mouseout', e => {
 
 // Splitter :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-// if  document.querySelector('#split-evenly').checked === false
 const unevenlySliceIntoChunks = (arr, maxChunkSize) => {
     const res = [];
     for (let i = 0; i < arr.length; i += maxChunkSize) {
@@ -164,11 +165,9 @@ const unevenlySliceIntoChunks = (arr, maxChunkSize) => {
     return res;
 }
 
-// if  document.querySelector('#split-evenly').checked === true
 const evenlySliceIntoChunks = (arr, maxChunkSize) => {
     const res = [];
     const chunkSize = Math.ceil(arr.length / (Math.ceil(arr.length / maxChunkSize)));
-    console.log(chunkSize);
     for (let i = 0; i < arr.length; i += chunkSize) {
         const chunk = arr.slice(i, i + chunkSize);
         res.push(chunk);
@@ -176,9 +175,15 @@ const evenlySliceIntoChunks = (arr, maxChunkSize) => {
     return res;
 }
 
-
-
-
+splitterProcessButton.addEventListener('click', e => {
+    chunksArray = [];
+    const maxChunkSize = parseInt(document.querySelector('#maximum-number').value);
+    if (document.querySelector('#split-evenly').checked === true) {
+        chunksArray = evenlySliceIntoChunks(validAddressesArray, maxChunkSize)
+    } else {
+        chunksArray = unevenlySliceIntoChunks(validAddressesArray, maxChunkSize)
+    }
+})
 
 
 
