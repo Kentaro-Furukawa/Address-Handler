@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Address Handler</title>
 </head>
 
@@ -13,8 +14,18 @@
     <section id="header">
         <h1>Address Handler</h1>
     </section>
+    <section id="hero" class="py-32">
+        <div class="w-4/5 mx-auto">
+            <h2 class="my-16 font-bold text-center">Save time and be accurate with <span
+                    class=" uppercase font-extrabold text-3xl text-green-700">Address Handler</span>.</h2>
+            <p class="w-2/3 mx-auto text-lg">Validate a list of email addresses and remove duplicates.</br> You can even
+                split
+                up into chunks if you want.</p>
+        </div>
+
+    </section>
     <section id="src-input">
-        <textarea name="input-address-list" id="input-address-list" cols="30" rows="20"
+        <textarea name="input-address-list" id="input-address-list" cols="30" rows="10"
             placeholder="Input a list here..." autofocus></textarea>
         <div class="accordion-container">
             <hr>
@@ -85,7 +96,19 @@
         <section id="chunk-cards"></section>
     </section>
 
+    <footer class="pt-8 bg-gray-800 text-center">
+        <p class="mb-8 text-gray-300 uppercase">Thank you</p>
+        <ul class="flex justify-center mb-8 text-gray-500 hover:text-gray-300 transition-all duration-200">
+            <li><a href="https://github.com/Kentaro-Furukawa/Address-Handler" target="_blank" title="Github">
+                    <i data-feather="github"></i></a></li>
+        </ul>
+        <small class="text-gray-400">&copy; <script>document.write(new Date().getFullYear())</script> <a class="hover:text-gray-300 transition-all duration-200" href="https://github.com/Kentaro-Furukawa" target="_blank">Kentaro Furukawa</a></small>
+    </footer>
+
     <script src="/script/main.js"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
