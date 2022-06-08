@@ -186,8 +186,6 @@ const evenlySliceIntoChunks = (arr, maxChunkSize) => {
 }
 
 const createChunkElements = (chunksArray) => {
-    console.log('chunksArray --->>', chunksArray);
-
 
     document.querySelector('#chunks > h2:first-child').innerText = `You have ${chunksArray.length} chunks 👐`;
 
@@ -201,7 +199,7 @@ const createChunkElements = (chunksArray) => {
 
         const chunkCardSection = document.createElement('section');
         chunkCardSection.classList.add('chunk-card');
-        
+
         const chunkCardHeader = document.createElement('h4');
         chunkCardHeader.classList.add('chunk-card-header');
         chunkCardHeader.innerText = `Chunk ${index + 1}`;
@@ -248,9 +246,15 @@ const createChunkElements = (chunksArray) => {
         chunkCardSection.append(chunkCardHeader, chunkCardCount, chunkCardFirstItem, chunkCardLastItem, copyButtonContainer, chunkList);
 
 
+        copyButton.addEventListener('click', e => {
+            navigator.clipboard.writeText(element.toString().replaceAll(',', ';'));
+            tooltipSpan.innerText = 'Copied!';
+            copyIconSpan.innerText = '👍';
+        })
+        copyButton.addEventListener('mouseout', e => {
+            tooltipSpan.innerText = 'Copy';
+        })
     })
-
-
 }
 
 splitterProcessButton.addEventListener('click', e => {
@@ -273,6 +277,3 @@ splitterProcessButton.addEventListener('click', e => {
 
     chunkSection.style.display = 'block';
 })
-
-
-
