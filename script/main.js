@@ -197,8 +197,8 @@ const createChunkElements = (chunksArray) => {
 
     chunksArray.forEach((element, index) => {   // create elements for chunk cards section
 
-        const chunkCardSection = document.createElement('section');
-        chunkCardSection.classList.add('chunk-card');
+        const chunkCardContainer = document.createElement('section');
+        chunkCardContainer.classList.add('chunk-card');
 
         const chunkCardHeader = document.createElement('h4');
         chunkCardHeader.classList.add('chunk-card-header');
@@ -242,8 +242,8 @@ const createChunkElements = (chunksArray) => {
             chunkList.append(chunkListItem);
         })
 
-        document.querySelector('#chunk-cards').append(chunkCardSection);
-        chunkCardSection.append(chunkCardHeader, chunkCardCount, chunkCardFirstItem, chunkCardLastItem, copyButtonContainer, chunkList);
+        chunkCardsSection.append(chunkCardContainer);
+        chunkCardContainer.append(chunkCardHeader, chunkCardCount, chunkCardFirstItem, chunkCardLastItem, copyButtonContainer, chunkList);
 
 
         copyButton.addEventListener('click', e => {
@@ -262,6 +262,10 @@ splitterProcessButton.addEventListener('click', e => {
 
     while (chunkSummaryList.firstChild) {
         chunkSummaryList.removeChild(chunkSummaryList.firstChild);
+    }
+
+    while (chunkCardsSection.firstChild) {
+        chunkCardsSection.removeChild(chunkCardsSection.firstChild);
     }
 
     const maxChunkSize = parseInt(document.querySelector('#maximum-number').value);
