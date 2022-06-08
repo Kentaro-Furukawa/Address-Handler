@@ -32,10 +32,10 @@
         @apply w-1/2 mx-auto mb-4 text-right;
     }
     .tooltip {
-        @apply absolute bottom-14 right-0 scale-0 font-bold py-1 px-4 bg-gray-400 rounded-md transition-all duration-100 origin-bottom;
+        @apply absolute bottom-14 right-0 scale-0 font-bold py-1 px-4 bg-slate-400 rounded-md transition-all duration-100 origin-bottom;
     }
     .tooltip::after {
-        @apply content-[''] absolute top-full right-4 -ml-2 border-8 border-solid border-t-gray-400 border-b-transparent border-x-transparent;
+        @apply content-[''] absolute top-full right-4 -ml-2 border-8 border-solid border-t-slate-400 border-b-transparent border-x-transparent;
     }
 
     #header {
@@ -146,7 +146,7 @@
         @apply text-center mb-8;
     }
     #chunk-summary {
-        @apply w-1/2 mx-auto mb-16 py-2 bg-gray-200 text-center rounded-md;
+        @apply w-1/2 mx-auto mb-16 py-2 bg-slate-200 text-center rounded-md;
     }
     #chunk-summary li {
         @apply mb-2 first:mt-2;
@@ -155,7 +155,7 @@
         @apply w-1/2 mx-auto mb-16 p-4 bg-indigo-100 rounded-md shadow-md;
     }
     .chunk-card h4 {
-        @apply mb-4 py-2 pl-3 text-lg font-bold bg-gray-50 border-l-8 border-indigo-700 rounded-r-md;
+        @apply mb-4 py-2 pl-3 text-lg font-bold bg-slate-50 border-l-8 border-indigo-700 rounded-r-md;
     }
     .copy-chunk-result {
         @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
