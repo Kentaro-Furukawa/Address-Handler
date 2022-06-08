@@ -1,8 +1,3 @@
-// window.addEventListener('load', (event) => {
-//     document.querySelector('#copyright').append('&copy;' ,`2022 Kentaro Furukawa`);
-// });
-
-
 // Accordion ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 const accordion = document.querySelectorAll('.accordion-label');
