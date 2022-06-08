@@ -1,4 +1,4 @@
-// Accordion
+// Accordion ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 const accordion = document.querySelectorAll('.accordion-label');
 const accordionArray = [...accordion];
@@ -16,7 +16,7 @@ accordionArray.forEach(element => {
 });
 
 
-// Validation for input address list
+// Validation for input address list ::::::::::::::::::::::::::::::::::::::
 
 let inputLineCount = 0;
 let inputAtCount = 0;
@@ -150,3 +150,22 @@ copyWholeResult.addEventListener('click', e => {
 copyWholeResult.addEventListener('mouseout', e => {
     copyWholeResultTooltip.innerText = 'Copy';
 })
+
+
+// Splitter :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// if  document.querySelector('#split-evenly').checked === false
+const unevenlySliceIntoChunks = (arr, chunkSize) => {
+    const res = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+        const chunk = arr.slice(i, i + chunkSize);
+        res.push(chunk);
+    }
+    return res;
+}
+
+
+
+
+
+
