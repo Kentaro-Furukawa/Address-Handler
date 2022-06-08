@@ -46,6 +46,7 @@ const resultListContainer = document.querySelector('#result-list');
 const splitterSection = document.querySelector('#splitter');
 const splitterProcessButton = document.querySelector('#splitter-process');
 const chunkSection = document.querySelector('#chunks');
+const chunkSummaryList = document.querySelector('#chunk-summary > ol');
 const chunkCardsSection = document.querySelector('#chunk-cards');
 
 window.addEventListener('load', (event) => {
@@ -190,15 +191,27 @@ const createChunkElements = (chunksArray) => {
 
     document.querySelector('#chunks > h2:first-child').innerText = `You have ${chunksArray.length} chunks 👐`;
 
-    chunksArray.forEach((element, index) => {
+    chunksArray.forEach((element, index) => {   // create elements for chunk summary part
         const chunkSummaryListItem = document.createElement('li');
         chunkSummaryListItem.innerText = `Chunk ${index + 1}: ${element.length}`;
-        document.querySelector('#chunk-summary > ol').append(chunkSummaryListItem);
+        chunkSummaryList.append(chunkSummaryListItem);
     })
+
+    chunksArray.forEach((element, index) => {
+        
+
+    })
+
+
 }
 
 splitterProcessButton.addEventListener('click', e => {
     chunksArray = [];
+
+    while (chunkSummaryList.firstChild) {
+        chunkSummaryList.removeChild(chunkSummaryList.firstChild);
+    }
+
     const maxChunkSize = parseInt(document.querySelector('#maximum-number').value);
     if (document.querySelector('#split-evenly').checked === true) {
         chunksArray = evenlySliceIntoChunks(validAddressesArray, maxChunkSize)
