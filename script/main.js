@@ -185,9 +185,16 @@ const evenlySliceIntoChunks = (arr, maxChunkSize) => {
 }
 
 const createChunkElements = (chunksArray) => {
+    console.log('chunksArray --->>', chunksArray);
 
-    console.log('going to create chunk elements and append to the section.')
-    console.log('chunk array --> ', chunksArray);
+
+    document.querySelector('#chunks > h2:first-child').innerText = `You have ${chunksArray.length} chunks 👐`;
+
+    chunksArray.forEach((element, index) => {
+        const chunkSummaryListItem = document.createElement('li');
+        chunkSummaryListItem.innerText = `Chunk ${index + 1}: ${element.length}`;
+        document.querySelector('#chunk-summary > ol').append(chunkSummaryListItem);
+    })
 }
 
 splitterProcessButton.addEventListener('click', e => {
@@ -205,7 +212,6 @@ splitterProcessButton.addEventListener('click', e => {
 
     chunkSection.style.display = 'block';
 })
-
 
 
 
