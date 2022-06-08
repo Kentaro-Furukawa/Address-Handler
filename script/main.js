@@ -197,8 +197,56 @@ const createChunkElements = (chunksArray) => {
         chunkSummaryList.append(chunkSummaryListItem);
     })
 
-    chunksArray.forEach((element, index) => {
+    chunksArray.forEach((element, index) => {   // create elements for chunk cards section
+
+        const chunkCardSection = document.createElement('section');
+        chunkCardSection.classList.add('chunk-card');
         
+        const chunkCardHeader = document.createElement('h4');
+        chunkCardHeader.classList.add('chunk-card-header');
+        chunkCardHeader.innerText = `Chunk ${index + 1}`;
+
+        const chunkCardCount = document.createElement('p');
+        chunkCardCount.classList.add('chunk-card-count');
+        chunkCardCount.innerText = `Count: ${element.length}`;
+
+        const chunkCardFirstItem = document.createElement('p');
+        chunkCardFirstItem.classList.add('chunk-card-first-item');
+        chunkCardFirstItem.innerText = `${element[0]}`;
+
+        const chunkCardLastItem = document.createElement('p');
+        chunkCardLastItem.classList.add('chunk-card-last-item');
+        chunkCardLastItem.innerText = `${element[element.length - 1]}`;
+
+        const copyButtonContainer = document.createElement('div');
+        copyButtonContainer.classList.add('copy-button-container');
+
+        const copyButton = document.createElement('button');
+        copyButton.setAttribute('id', `copy-result-chunk-${index + 1}`);
+        copyButton.classList.add('copy-chunk-result', 'group')
+
+        const tooltipSpan = document.createElement('span');
+        tooltipSpan.classList.add('tooltip', 'group-hover:scale-100');
+        tooltipSpan.innerText = 'Copy';
+
+        const copyIconSpan = document.createElement('span');
+        copyIconSpan.classList.add('copy-icon');
+        copyIconSpan.innerText = '📋';
+
+        copyButtonContainer.append(copyButton);
+        copyButton.append(tooltipSpan, copyIconSpan)
+
+        const chunkList = document.createElement('ol');
+
+        element.forEach((item) => {
+            const chunkListItem = document.createElement('li');
+            chunkListItem.innerText = `${item}`;
+            chunkList.append(chunkListItem);
+        })
+
+        document.querySelector('#chunk-cards').append(chunkCardSection);
+        chunkCardSection.append(chunkCardHeader, chunkCardCount, chunkCardFirstItem, chunkCardLastItem, copyButtonContainer, chunkList);
+
 
     })
 
