@@ -1,3 +1,3 @@
 # Address Handler 🖐
 
-https://address-handler.kentarofurukawa.com/
+check out 👉 https://address-handler.kentarofurukawa.com/
