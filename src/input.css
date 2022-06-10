@@ -32,7 +32,7 @@
         @apply px-4 max-h-0 overflow-hidden transition-all duration-200 ease-linear;
     }
     .copy-button-container {
-        @apply w-1/2 mx-auto mb-4 text-right;
+        @apply w-full lg:w-1/2 lg:mx-auto mb-4 text-right;
     }
     .tooltip {
         @apply absolute bottom-14 right-0 scale-0 font-bold py-1 px-4 bg-slate-400 rounded-md transition-all duration-100 origin-bottom;
@@ -51,10 +51,10 @@
         @apply mt-8 p-4;
     }
     #src-input>textarea {
-        @apply w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+        @apply w-full lg:w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
     }
     #src-input>.accordion-container {
-        @apply w-1/2 my-4 p-2 mx-auto;
+        @apply w-full lg:w-1/2 my-4 p-2 mx-auto;
     }
     #src-input .accordion-content {
         @apply px-4;
@@ -102,13 +102,13 @@
         @apply text-center mt-8 mb-4;
     }
     #result p {
-        @apply text-center;
+        @apply text-left lg:text-center;
     }
     #copy-whole-result {
         @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
     }
     #result ol {
-        @apply w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside border-2 rounded-md;
+        @apply w-full lg:w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside border-2 rounded-md;
     }
     #result ol li {
         @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
@@ -149,13 +149,13 @@
         @apply text-center mb-8;
     }
     #chunk-summary {
-        @apply w-1/2 mx-auto mb-16 py-2 bg-slate-100 text-center rounded-md;
+        @apply w-4/5 lg:w-1/2 mx-auto mb-16 py-2 bg-slate-100 text-center rounded-md;
     }
     #chunk-summary li {
         @apply mb-2 first:mt-2;
     }
     .chunk-card {
-        @apply w-1/2 mx-auto mb-16 p-4 bg-indigo-100 even:bg-indigo-200 rounded-md shadow-md;
+        @apply w-full lg:w-1/2 mx-auto mb-16 p-4 bg-indigo-100 even:bg-indigo-200 rounded-md shadow-md;
     }
     .chunk-card h4 {
         @apply mb-4 py-2 pl-3 text-lg font-bold bg-slate-50 border-l-8 border-indigo-700 rounded-r-md;
