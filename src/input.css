@@ -40,6 +40,13 @@
     .tooltip::after {
         @apply content-[''] absolute top-full right-4 -ml-2 border-8 border-solid border-t-slate-400 border-b-transparent border-x-transparent;
     }
+    .header-button-tooltip {
+        @apply absolute top-16 right-4 scale-0 font-bold py-1 px-4 bg-slate-400 rounded-md transition-all duration-100 origin-top;
+    }
+    .header-button-tooltip::before {
+        @apply content-[''] absolute bottom-full right-4 mr-2 border-8 border-solid border-b-slate-400 border-t-transparent border-x-transparent;
+    }
+
 
     #header {
         @apply text-slate-50 bg-green-700 drop-shadow-md;

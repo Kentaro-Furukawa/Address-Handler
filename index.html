@@ -26,8 +26,14 @@
 </head>
 
 <body>
-    <section id="header">
-        <h1>Address Handler</h1>
+    <section id="header" class="flex place-content-between items-center">
+        <h1 >Address Handler</h1>
+        <div id="header-buttons-container" class="mr-4">
+            <button class="bg-slate-800 text-slate-300 py-2 px-8 rounded-md hover:bg-slate-700 hover:text-slate-50 transition-all delay-100 group">
+                <i data-feather="refresh-cw"></i>
+                <span class="header-button-tooltip group-hover:scale-100">Reload</span>
+            </button>
+        </div>
     </section>
     <section id="hero" class="py-24 bg-slate-50">
         <div class="w-4/5 mx-auto">
