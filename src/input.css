@@ -51,10 +51,10 @@
         @apply mt-8 p-4;
     }
     #src-input>textarea {
-        @apply w-full lg:w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+        @apply w-4/5 lg:w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
     }
     #src-input>.accordion-container {
-        @apply w-full lg:w-1/2 my-4 p-2 mx-auto;
+        @apply w-4/5 lg:w-1/2 my-4 p-2 mx-auto;
     }
     #src-input .accordion-content {
         @apply px-4;
