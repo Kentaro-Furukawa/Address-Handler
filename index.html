@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#252525" />
     <meta name="description" content="Validate a list of email addresses and remove duplicates. You can even split up into chunks if you like.">
     <link href="/css/output.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -120,6 +122,10 @@
     <script src="/script/main.js"></script>
     <script>
         feather.replace()
+
+        if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./service-worker.js');
+		}
     </script>
 </body>
 
