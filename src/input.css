@@ -128,7 +128,7 @@
         @apply mb-8 text-center;
     }
     #splitter-settings {
-        @apply w-1/2 mx-auto;
+        @apply w-full lg:w-1/2 mx-auto;
     }
     #splitter h3 {
         @apply mt-4 mb-6 text-center;

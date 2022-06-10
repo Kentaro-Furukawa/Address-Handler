@@ -892,7 +892,13 @@ hr {
 #splitter-settings {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  #splitter-settings {
+    width: 50%;
+  }
 }
 
 #splitter h3 {
