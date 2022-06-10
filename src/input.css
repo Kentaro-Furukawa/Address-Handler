@@ -51,7 +51,7 @@
         @apply mt-8 p-4;
     }
     #src-input>textarea {
-        @apply w-4/5 lg:w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-200 rounded-md;
+        @apply w-4/5 lg:w-1/2 p-2 mx-auto block bg-slate-50 border-2 border-slate-300 rounded-md;
     }
     #src-input>.accordion-container {
         @apply w-4/5 lg:w-1/2 my-4 p-2 mx-auto;
@@ -60,7 +60,7 @@
         @apply px-4;
     }
     #src-input .accordion-content input {
-        @apply w-full p-2 border-2 rounded-md;
+        @apply w-full p-2 border-2 border-slate-300 rounded-md;
     }
     #src-input>button#address-list-submit {
         @apply mx-auto my-4 px-16 block;
@@ -108,7 +108,7 @@
         @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
     }
     #result ol {
-        @apply w-full lg:w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside border-2 rounded-md;
+        @apply w-full lg:w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;
     }
     #result ol li {
         @apply py-1 px-4 font-mono odd:bg-sky-100 first:pt-4 last:pb-4 indent-2;
@@ -130,7 +130,7 @@
         @apply mb-4 px-4 text-center;
     }
     #splitter-settings input#maximum-number {
-        @apply w-16 py-1 text-center border-2 rounded-md;
+        @apply w-16 py-1 text-center border-2 border-slate-300 rounded-md;
     }
     #splitter-settings input#split-evenly {
         @apply mr-2;
