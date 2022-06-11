@@ -1,3 +1,13 @@
+const defaultEmailRegex = '[A-z,0-9,.,_,%,+,-]{1,}\@[A-z,0-9,.,_,%,+,-]{1,}';
+let emailRegex;
+
+window.addEventListener('load', (event) => {
+    copyWholeResultTooltip.innerText = 'Copy';
+    document.querySelector('#current-year').innerText = new Date().getFullYear();
+    document.querySelector('#email-regex').value = defaultEmailRegex;
+});
+
+
 // Accordion ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 const accordion = document.querySelectorAll('.accordion-label');
@@ -49,11 +59,6 @@ const chunkSection = document.querySelector('#chunks');
 const chunkSummaryList = document.querySelector('#chunk-summary > ol');
 const chunkCardsSection = document.querySelector('#chunk-cards');
 
-window.addEventListener('load', (event) => {
-    copyWholeResultTooltip.innerText = 'Copy';
-    document.querySelector('#current-year').innerText = new Date().getFullYear();
-});
-
 // const INVALID_STATES = Object.freeze({
 //     NO_VALID_ITEM: 'No valid email address in the line',
 //     INVALID_FORM_ITEM: 'Invalid form email address'
@@ -62,7 +67,7 @@ window.addEventListener('load', (event) => {
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value.trim();
     const inputRegex = document.querySelector('#email-regex').value;
-    const emailRegex = new RegExp(inputRegex, 'gi');
+    emailRegex = new RegExp(inputRegex, 'gi');
     inputAddressArray = [];
     validAddresses = {};
     inputSectionMessage.innerText = '';
@@ -300,12 +305,12 @@ splitterProcessButton.addEventListener('click', e => {
 
 document.querySelector('#reload-button').addEventListener('click', e => {
 
-    if(!(document.querySelector('#input-address-list').value.trim())) {
+    if(!(document.querySelector('#input-address-list').value.trim()) && document.querySelector('#email-regex').value === defaultEmailRegex) {
         location.reload()
         return
     }
     
-    
+
 
 });
 
