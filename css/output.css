@@ -1101,6 +1101,7 @@ button:active {
   left: 0px;
   top: 0px;
   z-index: 20;
+  display: none;
   height: 100%;
   width: 100%;
   align-items: center;
@@ -1118,7 +1119,10 @@ button:active {
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
 }
 
@@ -1128,7 +1132,7 @@ button:active {
   }
 }
 
-#reload-modal-content .modal-close {
+#reload-modal-content #reload-modal-close {
   position: absolute;
   top: -2.5rem;
   right: 1rem;
@@ -1139,21 +1143,21 @@ button:active {
 }
 
 #reload-modal-button-container {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 #reload-modal-button-container button {
-  margin-right: 1rem;
   border-radius: 0.375rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
 #reload-confirm-button {
+  margin-right: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }

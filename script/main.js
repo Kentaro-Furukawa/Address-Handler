@@ -157,7 +157,7 @@ const inputAddressListValidation = () => {
     window.scroll({
         top: addressListSubmit.offsetTop - 20,
         behavior: 'smooth'
-      });
+    });
 
 }
 
@@ -296,21 +296,42 @@ splitterProcessButton.addEventListener('click', e => {
     window.scroll({
         top: splitterProcessButton.offsetTop - 20,
         behavior: 'smooth'
-      });
+    });
 
 })
 
 
 // Reload :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+const reloadModal = document.querySelector('#reload-modal');
+const reloadModalClose = document.querySelector('#reload-modal-close');
+const reloadConfirmButton = document.querySelector('#reload-confirm-button');
+const reloadCancelButton = document.querySelector('#reload-cancel-button');
+
 document.querySelector('#reload-button').addEventListener('click', e => {
 
-    if(!(document.querySelector('#input-address-list').value.trim()) && document.querySelector('#email-regex').value === defaultEmailRegex) {
+    if (!(document.querySelector('#input-address-list').value.trim()) && document.querySelector('#email-regex').value === defaultEmailRegex) {
         location.reload()
         return
     }
-    
-
-
+    reloadModal.style.display = 'block';
 });
 
+
+reloadConfirmButton.addEventListener('click', e => {
+    location.reload()
+});
+
+reloadModalClose.addEventListener('click', e => {
+    reloadModal.style.display = 'none';
+});
+
+reloadCancelButton.addEventListener('click', e => {
+    reloadModal.style.display = 'none';
+});
+
+window.addEventListener('click', e => {
+    if (e.target === reloadModal) {
+        reloadModal.style.display = 'none';
+    }
+});
