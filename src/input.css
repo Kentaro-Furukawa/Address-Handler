@@ -15,6 +15,9 @@
     hr {
         @apply border-slate-300;
     }
+    button {
+        @apply active:saturate-200;
+    }
 
     .button {
         @apply bg-blue-600 text-white rounded p-2 hover:bg-blue-700;
@@ -49,10 +52,13 @@
 
 
     #header {
-        @apply text-slate-50 bg-green-700 drop-shadow-md;
+        @apply py-2 text-slate-50 bg-green-700 drop-shadow-md;
     }
     #header>h1 {
-        @apply py-4 pl-4 text-2xl font-black uppercase;
+        @apply pl-6 text-2xl font-black uppercase;
+    }
+    #header>h1>img {
+        @apply inline-block mr-2;
     }
     #src-input {
         @apply mt-8 p-4;
@@ -112,7 +118,7 @@
         @apply text-left lg:text-center;
     }
     #copy-whole-result {
-        @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
+        @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 text-white rounded-md;
     }
     #result ol {
         @apply w-full lg:w-1/2 mx-auto max-h-96 overflow-auto bg-sky-50 list-decimal list-inside rounded-md;
@@ -168,7 +174,7 @@
         @apply mb-4 py-2 pl-3 text-lg font-bold bg-slate-50 border-l-8 border-indigo-700 rounded-r-md;
     }
     .copy-chunk-result {
-        @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white rounded-md;
+        @apply relative py-2 px-8 bg-green-600 hover:bg-green-700 text-white rounded-md;
     }
     .chunk-card .copy-button-container {
         @apply w-full;
