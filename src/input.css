@@ -16,7 +16,7 @@
         @apply border-slate-300;
     }
     button {
-        @apply active:saturate-200;
+        @apply active:opacity-90;
     }
 
     .button {
