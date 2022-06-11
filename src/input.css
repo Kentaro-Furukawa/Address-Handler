@@ -52,7 +52,7 @@
 
 
     #header {
-        @apply py-2 text-slate-50 bg-green-700 drop-shadow-md;
+        @apply py-2 z-10 text-slate-50 bg-green-700 drop-shadow-md;
     }
     #header>h1 {
         @apply pl-6 text-2xl font-black uppercase;

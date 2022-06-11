@@ -635,6 +635,7 @@ button:active {
 }
 
 #header {
+  z-index: 10;
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
@@ -1264,10 +1265,6 @@ button:active {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.delay-100 {
-  transition-delay: 100ms;
 }
 
 .duration-200 {
