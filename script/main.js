@@ -295,3 +295,17 @@ splitterProcessButton.addEventListener('click', e => {
 
 })
 
+
+// Reload :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+document.querySelector('#reload-button').addEventListener('click', e => {
+
+    if(!(document.querySelector('#input-address-list').value.trim())) {
+        location.reload()
+        return
+    }
+    
+    
+
+});
+
