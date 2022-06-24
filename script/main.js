@@ -58,11 +58,6 @@ const chunkSection = document.querySelector('#chunks');
 const chunkSummaryList = document.querySelector('#chunk-summary > ol');
 const chunkCardsSection = document.querySelector('#chunk-cards');
 
-// const INVALID_STATES = Object.freeze({
-//     NO_VALID_ITEM: 'No valid email address in the line',
-//     INVALID_FORM_ITEM: 'Invalid form email address'
-// })
-
 const inputAddressListValidation = () => {
     const inputAddressList = document.querySelector('#input-address-list').value.trim();
     const inputRegex = document.querySelector('#email-regex').value;
