@@ -32,7 +32,6 @@ let inputLineCount = 0;
 let inputAtCount = 0;
 let inputLineArray = [];
 let inputItemArray = [];
-let invalidLineArray = [];
 let inputAddressArray = [];
 let validAddresses = {};
 let duplicateAddresses = [];
@@ -105,12 +104,12 @@ const inputAddressListValidation = () => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
             const targetAddress = item.match(emailRegex);
-            if (!(targetAddress)) {
+            if (!(targetAddress) && item.length > 0) {
                 const invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
                 invalidSection.style.display = 'block';
-            } else {
+            } else if (targetAddress) {
                 // if aleady target address exists in validAddresses, push the lineNo, if not add new key pair.
                 validAddresses[targetAddress[0]] ? validAddresses[targetAddress[0]].push(lineNo) : validAddresses[targetAddress[0]] = [lineNo];
             }
