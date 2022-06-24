@@ -100,6 +100,8 @@ const inputAddressListValidation = () => {
         return
     }
 
+    inputSummary.style.display = 'block';
+
     inputLineArray.forEach((element, index) => {
         const lineNo = index + 1;
         element.split(/,|;|\s/).forEach((item) => {
@@ -116,7 +118,6 @@ const inputAddressListValidation = () => {
         })
     })
 
-    inputSummary.style.display = 'block';
 
     duplicateAddresses = Object.entries(validAddresses);
     if (duplicateAddresses.length > 0) {
@@ -146,8 +147,10 @@ const inputAddressListValidation = () => {
             resultListItem.innerText = `${validAddress}`;
             resultListContainer.append(resultListItem);
         }
-        resultSection.style.display = 'block';
 
+        if (validAddressesArray.length > 0) {
+            resultSection.style.display = 'block';
+        }
         if (validAddressesArray.length > 1) {
             splitterSection.style.display = 'block';
         }
