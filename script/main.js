@@ -110,13 +110,17 @@ const inputAddressListValidation = () => {
                 const invalidListItem = document.createElement('li');
                 invalidListItem.innerText = `${lineNo} : ${item}`;
                 invalidListContainer.append(invalidListItem);
-                invalidSection.style.display = 'block';
             } else if (targetAddress) {
                 // if aleady target address exists in validAddresses, push the lineNo, if not add new key pair.
                 validAddresses[targetAddress[0]] ? validAddresses[targetAddress[0]].push(lineNo) : validAddresses[targetAddress[0]] = [lineNo];
             }
         })
     })
+
+    if (invalidListContainer.hasChildNodes()) {
+        invalidSection.style.display = 'block';
+    }
+
 
 
     duplicateAddresses = Object.entries(validAddresses);
